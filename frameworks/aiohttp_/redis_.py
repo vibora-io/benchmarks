@@ -39,6 +39,6 @@ if __name__ == '__main__':
     cwd = os.path.dirname(__file__)
     gunicorn_path = os.path.join(os.path.dirname(sys.executable), 'gunicorn')
     cmd = f'{gunicorn_path} redis_:app -w {cpu_count()} ' \
-          f'--worker-class="aiohttp.worker.GunicornWebWorker" -b {sys.argv[1]}:{sys.argv[2]}'
+          f'--worker-class="aiohttp.worker.GunicornUVLoopWebWorker" -b {sys.argv[1]}:{sys.argv[2]}'
     p = subprocess.Popen(cmd, shell=True, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     p.wait()

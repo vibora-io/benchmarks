@@ -3,7 +3,7 @@ import aioredis
 from multiprocessing import cpu_count
 from sanic import Sanic
 from sanic.request import Request
-from sanic.response import text
+from sanic.response import raw
 from marshmallow import Schema, fields
 
 app = Sanic(__name__)
@@ -30,7 +30,7 @@ async def home(request: Request):
     data, errors = SimpleSchema.load(request.json)
     if not errors:
         value = await redis.get(data['key_name'])
-        return text(value.decode())
+        return raw(value)
 
 
 if __name__ == '__main__':

@@ -2,14 +2,14 @@ import sys
 from multiprocessing import cpu_count
 from sanic import Sanic
 from sanic.request import Request
-from sanic.response import text
+from sanic.response import raw
 
 app = Sanic(__name__)
 
 
 @app.route('/')
 async def home(request: Request):
-    return text('Naked!')
+    return raw(b'Naked!')
 
 
 if __name__ == '__main__':

@@ -1,44 +1,81 @@
 {
   "categories": [
-    {"name": "Hello World", "filename": "naked.py"},
-    {"name": "Validate JSON", "filename": "validate.py", "wrk_script": "post_json.lua"},
-    {"name": "Redis API", "filename": "redis_.py", "wrk_script": "redis.lua"},
-    {"name": "MultipartForm", "filename": "form.py", "wrk_script": "form.lua"}
+    {
+      "name": "Hello World",
+      "filename": "naked.py"
+    }
   ],
   "frameworks": [
     {
       "name": "Aiohttp",
-      "requirements": ["ujson", "aiohttp", "marshmallow", "aioredis", "gunicorn"],
+      "requirements": [
+        "ujson",
+        "aiohttp",
+        "marshmallow",
+        "aioredis",
+        "gunicorn",
+        "uvloop"
+      ],
       "dirname": "aiohttp_"
     },
     {
       "name": "Tornado",
-      "requirements": ["ujson", "tornado", "marshmallow", "redis"],
+      "requirements": [
+        "ujson",
+        "tornado",
+        "marshmallow",
+        "redis"
+      ],
       "dirname": "tornado_",
       "force_kill": false
     },
     {
       "name": "Django",
-      "requirements": ["ujson", "django", "marshmallow", "redis", "gunicorn", "meinheld"],
+      "requirements": [
+        "ujson",
+        "django",
+        "marshmallow",
+        "redis",
+        "gunicorn",
+        "meinheld"
+      ],
       "dirname": "django_"
     },
     {
       "name": "Sanic",
-      "requirements": ["uvloop", "ujson", "sanic", "marshmallow", "aioredis"],
+      "requirements": [
+        "uvloop",
+        "ujson",
+        "sanic",
+        "marshmallow",
+        "aioredis"
+      ],
       "dirname": "sanic_"
     },
     {
       "name": "Flask",
-      "requirements": ["gunicorn", "meinheld", "ujson", "flask", "marshmallow", "redis"],
+      "requirements": [
+        "gunicorn",
+        "meinheld",
+        "ujson",
+        "flask",
+        "marshmallow",
+        "redis"
+      ],
       "dirname": "flask_"
     },
     {
       "name": "Vibora",
-      "requirements": ["vibora", "aioredis", "ujson", "uvloop"],
+      "requirements": [
+        "vibora",
+        "aioredis",
+        "ujson",
+        "uvloop"
+      ],
       "dirname": "vibora_"
     }
   ],
-  "rounds": 1,
+  "rounds": 3,
   "warm_up_time": 5,
   "wrk_duration": 10
 }

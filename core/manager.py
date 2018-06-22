@@ -102,9 +102,11 @@ class BenchmarkManager:
                     script = os.path.join(framework_dir, category.filename)
                     if os.path.exists(script) and category.enabled:
                         for _ in range(0, self.config.rounds):
-                            scores[category][framework.name] = self.benchmark_framework(
+                            new_score = self.benchmark_framework(
                                 script, framework=framework, category=category
                             )
+                            if new_score > scores[category].get(framework.name, 0):
+                                scores[category][framework.name] = new_score
             else:
                 raise SystemExit(f"Missing dir {framework_dir} for framework: {framework.name}")
         return self.format_scores(scores)
