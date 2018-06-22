@@ -3,6 +3,21 @@
     {
       "name": "Hello World",
       "filename": "naked.py"
+    },
+    {
+      "name": "Validate JSON",
+      "filename": "validate.py",
+      "wrk_script": "post_json.lua"
+    },
+    {
+      "name": "Redis API",
+      "filename": "redis_.py",
+      "wrk_script": "redis.lua"
+    },
+    {
+      "name": "MultipartForm",
+      "filename": "form.py",
+      "wrk_script": "form.lua"
     }
   ],
   "frameworks": [
