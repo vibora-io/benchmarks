@@ -102,7 +102,7 @@ is the fastest option although not the most stable one.
 | Tornado       | 12,126        | 5.02    |
 | Django        | 18,317        | 2.0.6   |
 | Flask         | 18,326        | 1.0.2   |
-| Aiohttp       | 36,299        | 3.3.2   |
+| Aiohttp       | 28,521        | 3.3.2   |
 | Sanic         | 70,132        | 0.7.0   |
 | Vibora        | 131,614       | 0.0.6   |
 
