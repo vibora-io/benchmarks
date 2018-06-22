@@ -1,3 +1,7 @@
+> Last update: 22/06/2018. TLDR: Aiohttp is now using uvloop, Sanic slighly improved .
+
+> Before bashing this please open an issue and **help us improve it.**
+
 ### Python Web Benchmarks
 
 A simple project to benchmark Python web frameworks against [Vibora](http://vibora.io) in
@@ -48,12 +52,12 @@ is the fastest option although not the most stable one.
 
 | Frameworks    | Requests/Sec  | Version |
 | ------------- |:-------------:|:-------:|
-| Tornado       | 14,249         | 5.02    |
-| Django        | 22,727         | 2.0.6   |
-| Flask         | 37,139         | 1.0.2   |
-| Aiohttp       | 40,986         | 3.3.2   |
-| Sanic         | 116,195        | 0.7.0   |
-| Vibora        | 361,685        | 0.0.6   |
+| Tornado       | 14,197         | 5.02    |
+| Django        | 22,823         | 2.0.6   |
+| Flask         | 37,487         | 1.0.2   |
+| Aiohttp       | 61,252         | 3.3.2   |
+| Sanic         | 119,764        | 0.7.0   |
+| Vibora        | 368,456        | 0.0.6   |
 
 -------------
 #### Validate JSON
@@ -64,12 +68,12 @@ is the fastest option although not the most stable one.
 
 | Frameworks    | Requests/Sec  | Version |
 | ------------- |:-------------:|:-------:|
-| Tornado       | 12,159         | 5.02    |
-| Flask         | 18,216         | 1.0.2   |
-| Django        | 18,364         | 2.0.6   |
-| Aiohttp       | 26,204         | 3.3.2   |
-| Sanic         | 70,284         | 0.7.0   |
-| Vibora        | 131,292        | 0.0.6   |
+| Tornado       | 12,126         | 5.02    |
+| Flask         | 18,326         | 1.0.2   |
+| Django        | 18,317         | 2.0.6   |
+| Aiohttp       | 36,299         | 3.3.2   |
+| Sanic         | 69,921         | 0.7.0   |
+| Vibora        | 130,197        | 0.0.6   |
 
 
 -------------
@@ -81,12 +85,12 @@ is the fastest option although not the most stable one.
 
 | Frameworks    | Requests/Sec  | Version |
 | ------------- |:-------------:|:-------:|
-| Aiohttp       | 2,229         | 3.3.2   |
-| Django        | 7,294         | 2.0.6   |
-| Tornado       | 10,199        | 5.02    |
-| Flask         | 11,858        | 1.0.2   |
-| Sanic         | 46,516        | 0.7.0   |
-| Vibora        | 76,524        | 0.0.6   |
+| Aiohttp       | 2,315         | 3.3.2   |
+| Django        | 7,311         | 2.0.6   |
+| Tornado       | 10,292        | 5.02    |
+| Flask         | 11,923        | 1.0.2   |
+| Sanic         | 47,520        | 0.7.0   |
+| Vibora        | 76,612        | 0.0.6   |
 
 -------------
 #### Redis API
@@ -95,10 +99,10 @@ is the fastest option although not the most stable one.
 
 | Frameworks    | Requests/Sec  | Version |
 | ------------- |:-------------:|:-------:|
-| Tornado       | 12,159        | 5.02    |
-| Flask         | 18,216        | 1.0.2   |
-| Django        | 18,364        | 2.0.6   |
-| Aiohttp       | 26,242        | 3.3.2   |
-| Sanic         | 70,284        | 0.7.0   |
-| Vibora        | 131,292       | 0.0.6   |
+| Tornado       | 12,126        | 5.02    |
+| Django        | 18,317        | 2.0.6   |
+| Flask         | 18,326        | 1.0.2   |
+| Aiohttp       | 36,299        | 3.3.2   |
+| Sanic         | 70,132        | 0.7.0   |
+| Vibora        | 131,614       | 0.0.6   |
 
