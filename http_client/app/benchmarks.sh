@@ -70,6 +70,27 @@ echo ASYNC: vibora: Opt $DESC | tee -a /app/out
 echo | tee -a /app/out
 sleep $PAUSE
 
+# Tornado
+echo ASYNC: Tornado.simple: $DESC | tee -a /app/out
+/app/tornado/bench.py $URL $DURATION $CONS | tee -a /app/out
+echo | tee -a /app/out
+sleep $PAUSE
+
+echo ASYNC: Tornado.simple: UVloop $DESC | tee -a /app/out
+/app/tornado/bench_uvloop.py $URL $DURATION $CONS | tee -a /app/out
+echo | tee -a /app/out
+sleep $PAUSE
+
+echo ASYNC: Tornado.curl: $DESC | tee -a /app/out
+/app/tornado/bench_curl.py $URL $DURATION $CONS | tee -a /app/out
+echo | tee -a /app/out
+sleep $PAUSE
+
+echo ASYNC: Tornado.curl: UVloop $DESC | tee -a /app/out
+/app/tornado/bench_curl_uvloop.py $URL $DURATION $CONS | tee -a /app/out
+echo | tee -a /app/out
+sleep $PAUSE
+
 # WRK
 echo WRK: WRK: Opt $DESC | tee -a /app/out
 wrk -d ${DURATION}s -t 1 -c $CONS $URL | tee -a /app/out

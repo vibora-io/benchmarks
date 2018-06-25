@@ -14,7 +14,7 @@ RUN apk add --no-cache tini wrk apache2 libcurl openssl && \
 # Install build-time dependencies, builds requirements, then unintsall build-time dependencies
 # This is done in one step, so as to not require squashing
 RUN apk add --no-cache gcc musl-dev make curl-dev openssl-dev g++ && \
-    pip install urllib3 requests pycurl aiohttp cchardet aiodns uvloop trio asks vibora && \
+    pip install urllib3 requests pycurl aiohttp cchardet aiodns uvloop trio asks vibora tornado && \
     apk del --purge gcc musl-dev make curl-dev openssl-dev g++
 
 # Install custom code & config files
